@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Recommendations · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section>
+
+    <div
+        id="result"
+        data-id="{{ recommendation_id }}"
+    >
+        Loading recommendation...
+    </div>
+
+</section>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadResult("{{ recommendation_id }}");
+    });
+</script>>
+
+{% endblock %}
